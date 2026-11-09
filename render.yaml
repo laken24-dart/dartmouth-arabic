@@ -1,0 +1,41 @@
+# Render Blueprint — creates the whole site (web service + persistent disk + settings) from this file.
+# In Render: New → Blueprint → pick this repository. Spec: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: dartmouth-arabic
+    runtime: node
+    plan: 0.5c-512mb          # smallest paid instance; required for a persistent disk
+    region: virginia          # closest Render region to Hanover
+    buildCommand: npm run render-build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit # redeploy on every push to the main branch
+    disk:
+      name: data
+      mountPath: /var/data    # database, nightly backups, and cached Azure audio live here
+      sizeGB: 1               # can be increased later, never decreased
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "24"
+      - key: DATABASE_FILE
+        value: /var/data/dalt.db
+      - key: BACKUP_DIR
+        value: /var/data/backups
+      - key: TTS_CACHE_DIR
+        value: /var/data/tts-cache
+      - key: ALLOWED_EMAIL_DOMAIN
+        value: dartmouth.edu
+      # Instructor access code: Render generates a long random value. Find it under Environment in the dashboard.
+      - key: TEACHER_ACCESS_CODE
+        generateValue: true
+      # Secrets — Render asks for these when you create the Blueprint. Leave blank to switch the feature off.
+      - key: ANTHROPIC_API_KEY      # Daal, the AI tutor
+        sync: false
+      - key: AZURE_SPEECH_KEY       # Azure neural pronunciation
+        sync: false
+      - key: AZURE_SPEECH_REGION    # e.g. eastus
+        sync: false
+      # Dartmouth SSO — add in the dashboard once ITC registers the site:
+      #   PUBLIC_URL, SAML_ENTRY_POINT, SAML_IDP_CERT, TEACHER_EMAILS

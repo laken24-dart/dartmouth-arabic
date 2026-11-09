@@ -1,0 +1,18 @@
+# dependencies & builds
+node_modules/
+app/dist/
+
+# secrets — never commit keys or access codes
+.env
+.env.*
+!.env.example
+
+# local data: the database, cached audio, backups
+server/data/
+server/dev/.mock-idp/
+
+# local-only files
+classic-site-backup.zip
+.vscode/
+.DS_Store
+*.log

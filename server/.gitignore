@@ -1,0 +1,4 @@
+node_modules
+data/
+.env
+dev/.mock-idp/

@@ -1,0 +1,83 @@
+// Extracted from the classic site's curriculum.js and pattern tables.
+export const GRAMMAR_BANK = [
+    { id: "adj-agreement", prompt: "A student sees a female classmate at the Hop. Which adjective form agrees with طالبة (female student)?", options: ["جديد", "جديدة", "جدد", "الجديد"], answer: 1, explain: "Many feminine singular adjectives agree with a feminine noun and end in ة: طالبة جديدة." },
+    { id: "idafa", prompt: "You want to say “the student’s book” before study group. Which phrase uses an iḍāfa?", options: ["كتاب الطالب", "الكتاب الطالب", "كتابٌ الطالب", "الطالب كتاباً"], answer: 0, explain: "In an iḍāfa, the first noun is not marked with ال or tanwīn; the second noun identifies the possessor." },
+    { id: "dual", prompt: "You and a friend borrow exactly two books from Baker Library. What number form should you look for?", options: ["مفرد (singular)", "مثنّى (dual)", "جمع (plural)", "فعل ماضٍ (past verb)"], answer: 1, explain: "Arabic has a dual form for exactly two; the ending changes with grammatical case." },
+    { id: "past-negation", prompt: "Your friend did not go to class yesterday. Which particle commonly negates a past-tense verb in the course material?", options: ["هل", "ما", "إلى", "جدّاً"], answer: 1, explain: "ما can negate a past verb. لم + a jussive present verb is another formal option." },
+    { id: "present-negation", prompt: "You are saying that a classmate does not study Arabic now. Which particle commonly negates a present verb?", options: ["لا", "منذ", "لكن", "بعد"], answer: 0, explain: "لا commonly negates a present-tense verb." },
+    { id: "pronoun-we", prompt: "Your study group says “we are students.” Which pronoun means “we”?", options: ["أنا", "نحن", "هو", "أنتِ"], answer: 1, explain: "نحن (naḥnu) means “we.”" },
+    { id: "question-where", prompt: "You are asking where Baker Library is. Which Arabic question word means “where”?", options: ["متى", "أين", "لماذا", "كم"], answer: 1, explain: "أين (ʾayna) means “where.”" },
+    { id: "nominal", prompt: "You describe the Green as beautiful with a noun-first sentence. What commonly follows the topic in a nominal sentence?", options: ["A predicate / خبر", "A second article", "A past-negation particle", "A dual ending only"], answer: 0, explain: "A nominal sentence commonly has a topic (مبتدأ) followed by a predicate (خبر)." },
+    { id: "root-pattern", prompt: "You see كتب and كتاب while studying in the library. What is the shared consonantal root?", options: ["ك-ت-ب", "س-ك-ن", "ذ-ه-ب", "ع-م-ل"], answer: 0, explain: "The root ك-ت-ب is associated with writing; patterns form related words such as كتب and كتاب." },
+    { id: "definite-article", prompt: "You mean “the book” rather than “a book.” Which Arabic definite article is attached to the noun?", options: ["ال", "من", "في", "هل"], answer: 0, explain: "ال (al-) marks a noun as definite: كتاب → الكتاب." },
+    { id: "verbal-order", prompt: "A sentence starts with a verb describing a student’s action. What sentence type is this commonly called?", options: ["جملة فعلية (verbal sentence)", "جملة اسمية (nominal sentence)", "إضافة", "مثنّى"], answer: 0, explain: "A verbal sentence commonly begins with a verb, followed by the doer and possibly an object." },
+    { id: "preposition", prompt: "In the phrase في المكتبة (“in the library”), what role does في play?", options: ["Preposition / حرف جرّ", "Past verb", "Plural ending", "Question word"], answer: 0, explain: "في is a preposition meaning “in”; it precedes the noun phrase." },
+    { id: "adjective-order", prompt: "In البيت الكبير (“the big house”), where does the adjective commonly appear?", options: ["After the noun", "Before the noun in all cases", "At the end of the paragraph", "Only inside the verb"], answer: 0, explain: "An Arabic adjective commonly follows the noun and agrees with it in features such as definiteness and gender." },
+    { id: "m-noun", prompt: "Your class asks you to identify كلمة (word). Is it singular or plural?", options: ["مفرد (singular)", "مثنّى (dual)", "جمع (plural)", "مصدر نفي"], answer: 0, explain: "كلمة is singular; كلمات is its plural." },
+    { id: "negation-noun", prompt: "You want to say “the room is not large.” Which form in your course is used to negate a nominal sentence?", options: ["ليس", "هل", "أين", "لأنّ"], answer: 0, explain: "ليس is used to negate a nominal sentence, with agreement forms depending on the subject." },
+    { id: "which-word", prompt: "You are asking which course to take. Which Arabic question word can mean “which”?", options: ["أيّ", "مَن", "أمس", "أمام"], answer: 0, explain: "أيّ means “which” (and can also mean “any,” depending on context)." },
+    { id: "relative", prompt: "In a sentence about a female student “who studies at Dartmouth,” which relative form is feminine singular?", options: ["الذي", "التي", "الذين", "هؤلاء"], answer: 1, explain: "التي is a feminine singular relative pronoun meaning “who/which/that.”" },
+    { id: "future-negation", prompt: "You want to say a student does not own something. Which course verb means “to own”?", options: ["يملك", "يذهب", "يقرأ", "يشرب"], answer: 0, explain: "ملك / يملك means “to own.” ليس يملك can express “does not own.”" },
+    { id: "nisba", prompt: "A student from مصر (Egypt) is described with a nisba adjective. Which is a common masculine form?", options: ["مصري", "مصر", "مصرية", "مصريونَ"], answer: 0, explain: "A nisba adjective commonly adds يّ (often written ي) for masculine singular: مصر → مصري." },
+    { id: "adjective-indefinite", prompt: "You describe a classmate as “a good student.” What is a common adjective position in Arabic?", options: ["After the noun", "Before the noun only", "Inside the definite article", "Before the pronoun"], answer: 0, explain: "At this level, descriptive adjectives commonly follow the noun." }
+];
+
+export const GRAMMAR_TITLES = {
+    "adj-agreement": "Adjective agreement",
+    idafa: "Iḍāfa (possessive construction)",
+    dual: "The dual",
+    "past-negation": "Negating past actions",
+    "present-negation": "Negating present actions",
+    "pronoun-we": "Personal pronouns",
+    "question-where": "Question words",
+    nominal: "Nominal sentences",
+    "root-pattern": "Roots and patterns",
+    "definite-article": "The definite article ال",
+    "verbal-order": "Verbal sentences",
+    preposition: "Prepositions",
+    "adjective-order": "Adjective position and agreement",
+    "m-noun": "Noun number",
+    "negation-noun": "Negating nominal sentences",
+    "which-word": "أيّ (which)",
+    relative: "Relative pronouns",
+    "future-negation": "ملك / يملك (to own)",
+    nisba: "Nisba adjectives",
+    "adjective-indefinite": "Descriptive adjectives"
+};
+
+export const UNIT_GRAMMAR = {
+    ab: ["pronoun-we", "question-where", "definite-article", "nisba", "adj-agreement"],
+    "1": ["pronoun-we", "question-where", "nisba", "which-word"],
+    "2": ["pronoun-we", "nominal", "adj-agreement", "nisba"],
+    "3": ["idafa", "root-pattern", "verbal-order", "preposition"],
+    "4": ["verbal-order", "present-negation", "adj-agreement"],
+    "5": ["adj-agreement", "adjective-order", "nominal"],
+    "6": ["question-where", "preposition", "nominal", "verbal-order"],
+    "7": ["dual", "question-where", "past-negation", "negation-noun"],
+    "8": ["past-negation", "present-negation", "negation-noun", "definite-article"],
+    "9": ["verbal-order", "adjective-order", "nominal"],
+    "10": ["verbal-order", "preposition", "adjective-order", "nominal"],
+    "13": ["past-negation", "relative", "negation-noun", "which-word"],
+    "14": ["preposition", "adjective-order", "nominal"],
+    "15": ["negation-noun", "relative", "nisba", "definite-article"],
+    "16": ["preposition", "nominal", "adjective-order", "dual"],
+    "17": ["verbal-order", "root-pattern", "preposition", "nominal"],
+    "18": ["adj-agreement", "adjective-order", "dual", "nisba"],
+    "19": ["relative", "verbal-order", "nisba", "negation-noun"]
+};
+
+export const PATTERN_PANELS = [
+  { title: "Personal pronouns", source: "Lesson 2", note: "", rows: [["I","أنا"],["we","نحن"],["you (m.)","أنتَ"],["you (f.)","أنتِ"],["you two","أنتما"],["you (m. pl.)","أنتم"],["you (f. pl.)","أنتنّ"],["he / she","هو / هي"],["they two","هما"],["they (m. / f.)","هم / هنّ"]] },
+  { title: "Question words", source: "Lessons 1, 6, 7", note: "", rows: [["what? (no verb)","ما"],["what? (with verb)","ماذا"],["who?","مَن"],["where?","أين"],["how?","كيف"],["which?","أيّ"],["yes/no question","هل"],["why?","لماذا"],["when?","متى"],["how many?","كم"],["how much? (price)","بكم"]] },
+  { title: "Negation", source: "Lessons 7, 8, 13, 15", note: "Each negator pairs with a different kind of sentence.", rows: [["past verb: didn't","ما + past"],["past (formal): didn't","لم + present (jussive)"],["present verb: doesn't","لا + present"],["noun sentence: isn't","ليس"],["there isn't","ليس هناك"],["he doesn't have","ليس له"],["only (neg. + except)","لا … إلّا"]] },
+  { title: "Sentence grammar", source: "Lessons 2, 8, 16, 17", note: "<b>Nominal sentence</b> (starts with a noun): subject + predicate. <b>Verbal sentence</b> (starts with a verb): verb + doer + object.", rows: [["subject (nominal)","مبتدأ"],["predicate","خبر"],["doer of verb","الفاعل"],["object","المفعول به"],["root / pattern","جذر / وزن"],["nominative case","المرفوع"],["accusative case","المنصوب"],["genitive case","المجرور"],["iḍāfa (construct)","إضافة"],["nisba adjective","النسبة"]] },
+  { title: "Colors: the أفعل pattern", source: "Lesson 18", note: "Basic colors and physical traits share one pattern: <b>m. أفعل / f. فعلاء / pl. فُعل</b>. Newer colors are nisba adjectives (‑ي / ‑يّة).", rows: [["red","أحمر / حمراء / حمر"],["blue","أزرق / زرقاء / زرق"],["green","أخضر / خضراء / خضر"],["yellow","أصفر / صفراء / صفر"],["white","أبيض / بيضاء / بيض"],["black","أسود / سوداء / سود"],["bald","أصلع / صلعاء / صلع"],["brown / pink / gray","بنّي / زهري / رمادي"]] },
+  { title: "Days of the week", source: "Lesson 6", note: "Most are built on numbers: الأحد = one, الاثنين = two…", rows: [["Sunday","يوم الأحد"],["Monday","يوم الاثنين"],["Tuesday","يوم الثلاثاء"],["Wednesday","يوم الأربعاء"],["Thursday","يوم الخميس"],["Friday","يوم الجمعة"],["Saturday","يوم السبت"]] },
+  { title: "Numbers", source: "Alif Baa, Lesson 8", note: "Tens end in ‑ون (nominative) / ‑ين (other cases). 11–19 are two words.", rows: [["1 / 2 / 3","واحد / اثنان / ثلاثة"],["4 / 5 / 6","أربعة / خمسة / ستّة"],["7 / 8 / 9 / 10","سبعة / ثمانية / تسعة / عشرة"],["11 / 12","أحد عشر / اثنا عشر"],["20 / 21","عشرون / واحد وعشرون"],["30 / 40 / 50","ثلاثون / أربعون / خمسون"],["100","مئة"]] },
+  { title: "Ordinals & telling time", source: "Lesson 9", note: "Ordinals follow فاعل: ثالث, رابع, خامس… Time uses و (plus) and إلّا (minus).", rows: [["first (m./f.)","الأوّل / الأولى"],["second / third","الثاني / الثالث"],["quarter / third / half","ربع / ثلث / نصف"],["3:15","الثالثة والربع"],["3:30","الثالثة والنصف"],["2:45","الثالثة إلّا ربعاً"]] },
+  { title: "Weather & seasons", source: "Lesson 5", note: "", rows: [["winter / spring","الشتاء / الربيع"],["summer / autumn","الصيف / الخريف"],["hot / cold","حارّ / بارد"],["sunny / cloudy","مشمس / غائم"],["rainy / snowy","ممطر / مثلج"],["temperature","درجة الحرارة"],["humidity","الرطوبة"]] },
+  { title: "Feelings (فعلان adjectives)", source: "Alif Baa", note: "Colloquial-leaning adjectives on the فعلان / فعلانة pattern.", rows: [["hungry","جوعان"],["thirsty","عطشان"],["tired","تعبان"],["upset","زعلان"],["cold / hot (feeling)","بردان / حرّان"]] },
+  { title: "Letter-writing formulas", source: "Lesson 13", note: "", rows: [["Dear Professor (formal)","حضرة الأستاذ الدكتور"],["Opening greeting","تحية طيبة وبعد،"],["Closing","تفضّلوا بقبول شكري واحترامي"],["Ladies and gentlemen","سيّداتي سادتي"]] },
+  { title: "Idioms with body & color", source: "Lesson 18 · colloquial", note: "", rows: [["kind-hearted","قلبه أبيض"],["very angry","عينه حمرا"],["talks back","لسانه طويل"],["steals","إيده طويلة"],["funny","دمّه خفيف"],["obnoxious","دمّه ثقيل"],["oh no! (bad news)","يا نهار أسود"]] },
+  { title: "Religious expressions", source: "Alif Baa, Lesson 17", note: "", rows: [["God willing","إن شاء الله"],["God has willed it (praise)","ما شاء الله"],["in the name of God","بسم الله"],["God bless him & grant him peace","صلّى الله عليه وسلّم"],["may God be pleased with him","رضي الله عنه"],["holiday greeting","كلّ عام وأنتم بخير"]] },
+];
