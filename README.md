@@ -1,5 +1,7 @@
 # Dartmouth Arabic Language Trainer
 
+https://dartmouth-arabic.onrender.com/#/
+
 A day-by-day Arabic course (Alif Baa → Al-Kitaab Part 1) for Dartmouth students, with an instructor platform.
 
 - `app/` — the website (React + Framer Motion, built with Vite)
